@@ -9,7 +9,7 @@
 
 <body>
 
-    <header>
+    <header class="container">
         <h1>Hi, I'm Mike Minala</h1>
         <h2>I build polished digital experiences for modern brands.</h2>
 
@@ -19,63 +19,88 @@
             and emerging technologies.
         </p>
 
-        <a href="#contact">Get in touch</a>
+        <a href="#contact" class="btn">Get in touch</a>
     </header>
 
-    <main>
+    <main class="container layout">
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I am passionate about using technology to create practical
-                digital solutions for businesses, organisations, and
-                communities in Papua New Guinea.
-            </p>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Git & GitHub</li>
-                <li>Web Development</li>
-                <li>Information Technology</li>
-                <li>Artificial Intelligence</li>
-            </ul>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-
-            <article>
-                <h3>Personal Portfolio Website</h3>
+        <div>
+            <section id="about">
+                <h2>About Me</h2>
                 <p>
-                    My first professional portfolio website, developed
-                    while learning web development and software engineering.
+                    I am passionate about using technology to create practical
+                    digital solutions for businesses, organisations, and
+                    communities in Papua New Guinea.
                 </p>
-            </article>
+            </section>
 
-            <article>
-                <h3>Digital Community Solutions</h3>
+            <section id="projects">
+                <h2>Projects</h2>
+
+                <div class="projects-grid">
+                    <article class="card">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>
+                            My first professional portfolio website, developed
+                            while learning web development and software engineering.
+                        </p>
+                    </article>
+
+                    <article class="card">
+                        <h3>Digital Community Solutions</h3>
+                        <p>
+                            Exploring technology solutions that can support
+                            communities and organisations in Papua New Guinea.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
                 <p>
-                    Exploring technology solutions that can support
-                    communities and organisations in Papua New Guinea.
+                    Interested in working together or discussing a project? Use the form below or email me directly.
                 </p>
-            </article>
-        </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>
-                Interested in working together or discussing a project?
-            </p>
-        </section>
+                <form class="contact" action="#" method="post">
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name">
+
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email">
+
+                    <label for="message" class="sr-only">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell me about your project..."></textarea>
+
+                    <input type="submit" value="Send message" class="btn-primary">
+                </form>
+            </section>
+        </div>
+
+        <aside>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Git &amp; GitHub</li>
+                    <li>Web Development</li>
+                    <li>Information Technology</li>
+                    <li>Artificial Intelligence</li>
+                </ul>
+            </section>
+
+            <section id="quick-contact" class="card">
+                <h3>Quick contact</h3>
+                <p class="small">Email: <a href="mailto:mikeminala7@gmail.com">mikeminala7@gmail.com</a></p>
+                <p class="small">Location: Papua New Guinea</p>
+            </section>
+        </aside>
 
     </main>
 
-    <footer>
+    <footer class="container">
         <p>© 2026 Mike Minala. All rights reserved.</p>
     </footer>
 
