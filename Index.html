@@ -14,15 +14,19 @@
 
 <body>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="container">
+    <header id="home" class="container">
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
         <h1>Hi, I'm Mike Minala</h1>
         <h2>I build polished digital experiences for modern brands.</h2>
 
@@ -35,7 +39,7 @@
         <a href="#contact" class="btn">Get in touch</a>
     </header>
 
-    <main class="container layout">
+    <main id="main" class="container layout">
 
         <div>
             <section id="about">
