@@ -1,51 +1,79 @@
-/* WhatsApp floating button */
-.whatsapp-btn {
+/* WhatsApp quick-message menu */
+.whatsapp-wrap {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: #25D366; /* WhatsApp green */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 24px rgba(16,24,40,0.16);
   z-index: 10000;
-  text-decoration: none;
-  transition: transform 140ms ease, box-shadow 140ms ease, opacity 120ms ease;
+  display: inline-block;
+  font-family: inherit;
 }
 
-/* Slight lift on hover/focus */
-.whatsapp-btn:hover,
-.whatsapp-btn:focus {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 30px rgba(16,24,40,0.2);
+/* keep main button styling (already present) */
+.whatsapp-wrap .whatsapp-btn {
+  position: relative;
+  width: 52px;
+  height: 52px;
+}
+
+/* menu panel */
+.whatsapp-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.75rem);
+  min-width: 220px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(16,24,40,0.12);
+  padding: 0.5rem;
+  transform-origin: bottom right;
+  transition: transform 160ms ease, opacity 160ms ease;
+  opacity: 0;
+}
+
+/* visible state */
+.whatsapp-wrap.open .whatsapp-menu {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* menu list */
+.whatsapp-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.whatsapp-menu li + li { margin-top: 0.35rem; }
+
+/* option buttons */
+.whatsapp-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.55rem 0.6rem;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+}
+.whatsapp-option:hover,
+.whatsapp-option:focus {
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
   outline: none;
 }
 
-/* SVG icon inside the button */
-.whatsapp-btn svg {
-  width: 22px;
-  height: 22px;
+/* small label / hint (optional) */
+.whatsapp-menu .hint {
   display: block;
-  fill: #ffffff;
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 0 0.25rem 0.4rem;
 }
 
-/* Accessible focus ring */
-.whatsapp-btn:focus {
-  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
-  border-radius: 50%;
+/* responsive: adapt panel width on small screens */
+@media (max-width: 420px) {
+  .whatsapp-menu { min-width: 180px; right: -0.25rem; }
 }
-
-/* Hide on very small screens if you prefer (optional) */
-@media (max-width: 360px) {
-  .whatsapp-btn { right: 0.5rem; bottom: 0.5rem; width: 44px; height: 44px; }
-}
-
-/* If you ever want the button to not appear on desktop (mobile-only) */
-/*
-@media (min-width: 641px) {
-  .whatsapp-btn { display: none; }
-}
-*/
