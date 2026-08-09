@@ -122,38 +122,15 @@
         <p>© 2026 Mike Minala. All rights reserved.</p>
     </footer>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const btn = document.querySelector('.nav-toggle');
-    const header = document.querySelector('header');
-    const nav = document.getElementById('primary-nav');
-    if (!btn || !header || !nav) return;
+  <!-- WhatsApp floating button -->
+  <a class="whatsapp-btn" href="https://wa.me/67581533028?text=Hi%20Mike%20%E2%80%94%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <path fill="#FFFFFF" d="M20.52 3.48A11.88 11.88 0 0 0 12 .5C6.48.5 1.9 4.91 1.13 10.14-.03 15.79 4.12 20.9 9.76 22.2c.78.15 1.13-.34 1.13-.76 0-.37-.01-1.36-.02-2.67-.41.09-.9.13-1.37.13-2.72 0-5.23-1.84-6.07-4.64-.57-1.7-.3-3.54.74-4.98C6.97 7.22 9.2 6.25 12 6.25c3.61 0 6.53 2.78 6.92 6.32.09.84-.03 1.61-.33 2.29-.16.34.02.73.37.88 1.01.42 2.11.65 3.26.65.43 0 .78-.3.86-.72.66-3.05.15-6.34-1.95-8.69z"/>
+    </svg>
+  </a>
 
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const open = header.classList.toggle('open');
-      btn.setAttribute('aria-expanded', String(open));
-    });
-
-    // Close nav when clicking outside on small screens
-    document.addEventListener('click', function (e) {
-      if (!header.classList.contains('open')) return;
-      if (!header.contains(e.target)) {
-        header.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Close nav on Escape
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && header.classList.contains('open')) {
-        header.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.focus();
-      }
-    });
-  });
-</script>
+  <!-- load site script -->
+  <script src="script.js" defer></script>
 
 </body>
 </html>
