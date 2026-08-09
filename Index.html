@@ -122,12 +122,24 @@
         <p>© 2026 Mike Minala. All rights reserved.</p>
     </footer>
 
-  <!-- WhatsApp floating button -->
-  <a class="whatsapp-btn" href="https://wa.me/67581533028?text=Hi%20Mike%20%E2%80%94%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-      <path fill="#FFFFFF" d="M16 3C9.4 3 4 8.4 4 15c0 2.7.9 5.1 2.5 7.1L6 29l7-1.8c1.8 0 3.5-.5 5-1.5 3.8-2.3 6.1-6.6 6.1-11.7C26 8.4 20.6 3 16 3zm4.5 17.6c-.2.5-1.2 1.1-1.7 1.2-.5.2-1 .3-1.8-.1-1-.3-2.4-1-3.8-2.4-1.4-1.4-2-2.9-2.4-3.9-.4-1.1 0-1.7.4-2.1.4-.4.9-.9 1.5-.6.6.2 1.6.8 2 1.1.4.3.7.5 1 .8.3.2.5.2.8.1.3-.1.7-.3 1-.5.3-.2.5-.3.7-.5.2-.2.5-.2.8-.1.3.1.7.4.9.6.3.3.6.6.7 1.1.1.5.1 1 0 1.5-.1.5-.4 1-1 1.8z"/>
-    </svg>
-  </a>
+  <!-- WhatsApp floating button (opens quick messages) -->
+  <div class="whatsapp-wrap" aria-hidden="false">
+    <button class="whatsapp-btn" aria-haspopup="true" aria-expanded="false" aria-controls="whatsapp-menu" aria-label="Open WhatsApp quick messages">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <path fill="#FFFFFF" d="M16 3C9.4 3 4 8.4 4 15c0 2.7.9 5.1 2.5 7.1L6 29l7-1.8c1.8 0 3.5-.5 5-1.5 3.8-2.3 6.1-6.6 6.1-11.7C26 8.4 20.6 3 16 3zm4.5 17.6c-.2.5-1.2 1.1-1.7 1.2-.5.2-1 .3-1.8-.1-1-.3-2.4-1-3.8-2.4-1.4-1.4-2-2.9-2.4-3.9-.4-1.1 0-1.7.4-2.1.4-.4.9-.9 1.5-.6.6.2 1.6.8 2 1.1.4.3.7.5 1 .8.3.2.5.2.8.1.3-.1.7-.3 1-.5.3-.2.5-.3.7-.5.2-.2.5-.2.8-.1.3.1.7.4.9.6.3.3.6.6.7 1.1.1.5.1 1 0 1.5-.1.5-.4 1-1 1.8z"/>
+      </svg>
+    </button>
+
+    <div id="whatsapp-menu" class="whatsapp-menu" role="menu" aria-hidden="true">
+      <ul>
+        <li><button class="whatsapp-option" data-msg="Hi Mike — I’m interested in your web development services.">Work with me</button></li>
+        <li><button class="whatsapp-option" data-msg="Hello Mike, I found your portfolio and would like to discuss a project.">Discuss a project</button></li>
+        <li><button class="whatsapp-option" data-msg="Hi Mike! Can we schedule a quick call about a website?">Schedule a call</button></li>
+        <li><button class="whatsapp-option" data-msg="Hi Mike — I have a small business and need a website. Can you help?">Small business website</button></li>
+        <li><button class="whatsapp-option" data-msg="Hello Mike — I’m looking for a developer for a long-term contract. Are you available?">Long-term contract</button></li>
+      </ul>
+    </div>
+  </div>
 
   <!-- load site script -->
   <script src="script.js" defer></script>
